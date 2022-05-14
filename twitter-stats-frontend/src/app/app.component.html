@@ -1,0 +1,53 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div class="container">
+  <h3> Crypto currency Sentimental analyses</h3>
+  <ngx-charts-bar-vertical
+    [view]="[1000,400]"
+    [results]="tweetsStats"
+    [xAxisLabel]="'Crypto currency'"
+    [legendTitle]="'Crypto currency'"
+    [yAxisLabel]="'Number of Tweets'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="false">
+  </ngx-charts-bar-vertical>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <h3>Total treated tweets by the system : </h3>
+      <h4>{{totalTweets}}</h4>
+    </div>
+
+
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tweet text</th>
+      <th scope="col">Tag</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tweet of latestTweets; let i = index">
+      <th scope="row">{{i}}</th>
+      <td>{{tweet.text}}</td>
+      <td>{{tweet.tag}}</td>
+    </tr>
+
+  </table>
+</div>
+
+<router-outlet></router-outlet>
