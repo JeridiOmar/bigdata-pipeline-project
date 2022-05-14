@@ -13,7 +13,6 @@ import com.google.gson.reflect.TypeToken;
 
 import com.twitter.clientlib.JSON;
 import com.twitter.clientlib.model.FilteredStreamingTweet;
-import com.twitter.clientlib.model.StreamingTweet;
 import com.twitter.clientlib.model.SingleTweetLookupResponse;
 
 public class TweetsStreamListenersExecutor {
